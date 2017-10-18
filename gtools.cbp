@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="gtools" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/gtools" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Waddress" />
+					<Add option="-Warray-bounds" />
+					<Add option="-Wc++0x-compat" />
+					<Add option="-Wchar-subscripts" />
+					<Add option="-Wenum-compare" />
+					<Add option="-Wcomment" />
+					<Add option="-Wformat" />
+					<Add option="-Wmissing-braces" />
+					<Add option="-Wparentheses" />
+					<Add option="-Wreorder" />
+					<Add option="-Wreturn-type" />
+					<Add option="-Wsequence-point" />
+					<Add option="-Wsign-compare" />
+					<Add option="-Wstrict-aliasing" />
+					<Add option="-Wstrict-overflow=1" />
+					<Add option="-Wswitch" />
+					<Add option="-Wtrigraphs" />
+					<Add option="-Wuninitialized" />
+					<Add option="-Wunknown-pragmas" />
+					<Add option="-Wunused-function" />
+					<Add option="-Wunused-label" />
+					<Add option="-Wunused-value" />
+					<Add option="-Wvolatile-register-var" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="user32" />
+				</Linker>
+			</Target>
+			<Target title="Debug">
+				<Option output="bin/Debug/gtools" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-g" />
+					<Add option="-Waddress" />
+					<Add option="-Warray-bounds" />
+					<Add option="-Wc++0x-compat" />
+					<Add option="-Wchar-subscripts" />
+					<Add option="-Wenum-compare" />
+					<Add option="-Wcomment" />
+					<Add option="-Wformat" />
+					<Add option="-Wmissing-braces" />
+					<Add option="-Wparentheses" />
+					<Add option="-Wreorder" />
+					<Add option="-Wreturn-type" />
+					<Add option="-Wsequence-point" />
+					<Add option="-Wsign-compare" />
+					<Add option="-Wstrict-aliasing" />
+					<Add option="-Wstrict-overflow=1" />
+					<Add option="-Wswitch" />
+					<Add option="-Wtrigraphs" />
+					<Add option="-Wuninitialized" />
+					<Add option="-Wunknown-pragmas" />
+					<Add option="-Wunused-function" />
+					<Add option="-Wunused-label" />
+					<Add option="-Wunused-value" />
+					<Add option="-Wvolatile-register-var" />
+					<Add option="-DBUILD_DLL" />
+					<Add option="-DDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add library="user32" />
+				</Linker>
+			</Target>
+			<Target title="Debug+test">
+				<Option output="bin/Debug/gtools" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-g" />
+					<Add option="-Waddress" />
+					<Add option="-Warray-bounds" />
+					<Add option="-Wc++0x-compat" />
+					<Add option="-Wchar-subscripts" />
+					<Add option="-Wenum-compare" />
+					<Add option="-Wcomment" />
+					<Add option="-Wformat" />
+					<Add option="-Wmissing-braces" />
+					<Add option="-Wparentheses" />
+					<Add option="-Wreorder" />
+					<Add option="-Wreturn-type" />
+					<Add option="-Wsequence-point" />
+					<Add option="-Wsign-compare" />
+					<Add option="-Wstrict-aliasing" />
+					<Add option="-Wstrict-overflow=1" />
+					<Add option="-Wswitch" />
+					<Add option="-Wtrigraphs" />
+					<Add option="-Wuninitialized" />
+					<Add option="-Wunknown-pragmas" />
+					<Add option="-Wunused-function" />
+					<Add option="-Wunused-label" />
+					<Add option="-Wunused-value" />
+					<Add option="-Wvolatile-register-var" />
+					<Add option="-DBUILD_DLL" />
+					<Add option="-DDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add library="user32" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="cmd /c postbuild.bat" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-D_WIN32_WINNT=0x0501" />
+		</Compiler>
+		<Linker>
+			<Add library="ws2_32" />
+			<Add library="shlwapi" />
+		</Linker>
+		<Unit filename="core.hpp" />
+		<Unit filename="gothic.cpp" />
+		<Unit filename="gothic.hpp" />
+		<Unit filename="gothic_zenstring.hpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="main.hpp" />
+		<Unit filename="res.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="scripts.cpp" />
+		<Unit filename="scripts.hpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
